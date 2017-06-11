@@ -1,5 +1,9 @@
 # FindAddresAPI
 
+### Introduction
+
+This is an API using https://projects.spring.io/spring-boot/[Spring Boot] with http://camel.apache.org[Camel]. It provides a REST service that is created with http://camel.apache.org/rest-dsl.html[Camel REST DSL], using  the http://camel.apache.org/geocoder.html[Geocoder component] and documented with http://swagger.io[Swagger].
+
 ### Build
 You can build this example using:
 
@@ -9,3 +13,9 @@ You can build this example using:
 You can run this example using:
 
   $ mvn spring-boot:run
+
+After the Spring Boot application is started, you can open the following URL in your web browser to access the REST endpoint and request the address for "Amsterdam": http://localhost:8080/camel/find/?address=Amsterdam
+
+The REST endpoint from the command line:
+
+    $ curl http://localhost:8080/camel/find/?address=Amsterdam
