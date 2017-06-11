@@ -26,7 +26,7 @@ public class ApplicationTest {
 
 	@Test
 	public void shouldReturnAmsterdamLocation() {
-		ResponseEntity<GeocodeResponse> response = restTemplate.exchange("/camel/geocoder?address=Amsterdam",
+		ResponseEntity<GeocodeResponse> response = restTemplate.exchange("/camel/find?address=Amsterdam",
 				HttpMethod.GET, null, new ParameterizedTypeReference<GeocodeResponse>() {
 				});
 		assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);

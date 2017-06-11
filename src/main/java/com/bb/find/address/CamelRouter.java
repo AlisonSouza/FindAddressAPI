@@ -17,18 +17,15 @@ public class CamelRouter extends RouteBuilder {
             .bindingMode(RestBindingMode.json)
             .dataFormatProperty("prettyPrint", "true")
             .apiContextPath("/api-doc")
-                .apiProperty("api.title", "find address API").apiProperty("api.version", "1.0.0")
-                .apiProperty("cors", "true");
+            .apiProperty("api.title", "find address API").apiProperty("api.version", "1.0.0")
+            .apiProperty("cors", "true");
 
-
-        rest("/geocoder").description("find address REST service")
-                .consumes("application/xml")
-                .produces("application/json")
-
-                .get().description("Geocoder address lookup").outType(GeocodeResponse.class)
-                .param().name("address").type(query).description("The address to find").dataType("string").endParam()
-                .responseMessage().code(200).message("Geocoder successful").endResponseMessage()
-                .toD("geocoder:address:${header.address}");
-
+        rest("/find").description("find address REST service")
+            .consumes("application/xml")
+            .produces("application/json")
+            .get().description("Geocoder address lookup").outType(GeocodeResponse.class)
+            .param().name("address").type(query).description("The address to find").dataType("string").endParam()
+            .responseMessage().code(200).message("Find Location successful").endResponseMessage()
+            .toD("geocoder:address:${header.address}");
     }
 }
