@@ -2,7 +2,7 @@
 
 ### Introduction
 
-This is an API using https://projects.spring.io/spring-boot/[Spring Boot] with http://camel.apache.org[Camel]. It provides a REST service that is created with http://camel.apache.org/rest-dsl.html[Camel REST DSL], using  the http://camel.apache.org/geocoder.html[Geocoder component] and documented with http://swagger.io[Swagger].
+This is an API using https://projects.spring.io/spring-boot/[Spring Boot], integration with http://camel.apache.org[Camel] and Maven for compiling and building the application. It provides a REST service that is created with http://camel.apache.org/rest-dsl.html[Camel REST DSL], using  the http://camel.apache.org/geocoder.html[Geocoder component] and documented with http://swagger.io[Swagger].
 
 ### Build
 You can build this example using:
