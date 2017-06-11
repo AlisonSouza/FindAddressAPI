@@ -1,4 +1,4 @@
-# FindAddresAPI
+# FindAddressAPI
 
 ### Introduction
 
@@ -19,3 +19,7 @@ After the Spring Boot application is started, you can open the following URL in 
 The REST endpoint from the command line:
 
     $ curl http://localhost:8080/camel/find/?address=Amsterdam
+
+The Swagger documentation is at: http://localhost:8080/camel/api-doc and can be retrieved with the following command:
+
+    $ curl http://localhost:8080/camel/api-doc
