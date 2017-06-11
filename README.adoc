@@ -1,11 +1,11 @@
 # FindAddresAPI
 
-###Build
+### Build
 You can build this example using:
 
-  mvn package
+  $ mvn package
 
-###Run
+### Run
 You can run this example using:
 
-  mvn spring-boot:run
+  $ mvn spring-boot:run
