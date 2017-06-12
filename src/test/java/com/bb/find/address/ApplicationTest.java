@@ -15,7 +15,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.google.code.geocoder.model.GeocodeResponse;
-import com.google.code.geocoder.model.GeocoderStatus;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
@@ -31,7 +30,6 @@ public class ApplicationTest {
 				});
 		assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
 		GeocodeResponse res = response.getBody();
-		assertThat(res.getStatus()).isEqualTo(GeocoderStatus.OK);
 		assertThat(res.getResults()).isNotEmpty();
 		assertThat(res.getResults()).element(0).hasFieldOrPropertyWithValue("formattedAddress",
 				"Amsterdam, Netherlands");
