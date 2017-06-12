@@ -17,9 +17,23 @@ You can run using:
 ### Test
 After the Spring Boot application is started, you can open the following URL in your web browser to access the REST endpoint and request the address for "Amsterdam": http://localhost:8080/camel/find/?address=Amsterdam
 
+
 The REST endpoint from the command line:
 
     $ curl http://localhost:8080/camel/find/?address=Amsterdam
+
+### Should return:
+----
+{
+  "results" : [ {
+    "formattedAddress" : "Amsterdam, Netherlands",
+    "location" : {
+      "lat" : 52.3702157,
+      "lng" : 4.895167900000001
+    }
+  } ]
+}
+----
 
 ### Documentation
 The Swagger documentation is at: http://localhost:8080/camel/api-doc and can be retrieved with the following command:
